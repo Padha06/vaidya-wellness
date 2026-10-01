@@ -16,7 +16,7 @@ const badges = [
 
 export default function HomePage() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="relative w-full">
       {/* HERO - Mobile-first responsive sizing with Pharmacy prioritized */}
       <section className="relative flex min-h-[76dvh] sm:min-h-[84dvh] md:min-h-[88dvh] items-center justify-center">
         <ThreeHero />

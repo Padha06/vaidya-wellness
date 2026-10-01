@@ -17,7 +17,7 @@ function Leaf({ i }: { i: number }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="absolute animate-float text-gold-light/70"
+      className="absolute animate-float text-gold-light/70 pointer-events-none"
       style={style}
       fill="currentColor"
       aria-hidden
@@ -29,14 +29,15 @@ function Leaf({ i }: { i: number }) {
 
 export function ThreeHero() {
   return (
-    <div className="absolute inset-0 overflow-hidden" aria-hidden>
-      <div className="absolute inset-0 animate-gradient-pan bg-[linear-gradient(120deg,#1E3A0E,#2D5016_30%,#6B8E3D_55%,#C9A961_80%,#2D5016)] bg-[length:220%_220%]" />
-      <div className="absolute -left-24 top-10 h-96 w-96 rounded-full bg-gold/25 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-[28rem] w-[28rem] rounded-full bg-forest-light/30 blur-3xl" />
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+      <div className="absolute inset-0 animate-gradient-pan bg-[linear-gradient(120deg,#1E3A0E,#2D5016_30%,#6B8E3D_55%,#C9A961_80%,#2D5016)] bg-[length:220%_220%] pointer-events-none" />
+      <div className="absolute -left-24 top-10 h-96 w-96 rounded-full bg-gold/25 blur-3xl pointer-events-none" />
+      <div className="absolute -right-24 bottom-0 h-[28rem] w-[28rem] rounded-full bg-forest-light/30 blur-3xl pointer-events-none" />
       {LEAVES.map((_, i) => (
         <Leaf key={i} i={i} />
       ))}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
     </div>
   );
 }
+

@@ -4,12 +4,24 @@
 
 html {
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: clip;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   background: #faf7f2;
   color: #1a1a1a;
+  position: relative;
 }
+
 
 img,
 video,
