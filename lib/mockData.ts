@@ -32,8 +32,7 @@ export const doctors: Doctor[] = [
     bio: "Gut-health specialist blending classical Virechana protocols with personalized dietetics. Trusted by 3,000+ patients for IBS, acidity, and metabolic harmony.",
     approach: "Agni-first healing — restoring cellular metabolism and digestive fire before prescription.",
     credentials: "BAMS (Kerala Ayurveda Academy) · CCAH · 22 yrs",
-    image_url:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop",
+    image_url: "/doctors/rajesh-iyer.jpg",
     rating: 4.9
   },
   {
@@ -45,8 +44,7 @@ export const doctors: Doctor[] = [
     bio: "Specialist in PCOS, thyroid balance, and pre/post-natal Ayurveda. Renowned for unhurried 30-minute consultations and compassionate care.",
     approach: "Cycle-aware wellness — harmonizing hormonal rhythms with classical Rasayana therapies.",
     credentials: "BAMS, MS (Prasuti Tantra) · NABH Certified · 15 yrs",
-    image_url:
-      "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop",
+    image_url: "/doctors/priya-menon.jpg",
     rating: 4.9
   },
   {
@@ -58,11 +56,11 @@ export const doctors: Doctor[] = [
     bio: "Former Chief Vaidya at Kerala Panchakarma Institute. Expert in classical pulse diagnosis (Nadi Pariksha) and seasonal detoxification regimens.",
     approach: "Gentle root-cause purification — tailored to your unique Prakriti constitution.",
     credentials: "BAMS, MD (Ayu) · Gold Medalist · 18 yrs",
-    image_url:
-      "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=800&auto=format&fit=crop",
+    image_url: "/doctors/ananya-sharma.jpg",
     rating: 4.8
   }
 ];
+
 
 export const products: Product[] = [
   {
