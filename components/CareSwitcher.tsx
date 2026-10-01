@@ -13,7 +13,7 @@ const productCategories = ["All", "Immunity", "Digestion", "Skin", "Women's Heal
 const doctorSpecialties = ["All", "Kayachikitsa (Internal)", "Panchakarma", "Nadi Pariksha"];
 
 export function CareSwitcher() {
-  const [activeTab, setActiveTab] = useState<"doctors" | "pharma">("doctors");
+  const [activeTab, setActiveTab] = useState<"pharma" | "doctors">("pharma");
   const [selectedSpecialty, setSelectedSpecialty] = useState("All");
   const [selectedProductCat, setSelectedProductCat] = useState("All");
 
@@ -30,40 +30,20 @@ export function CareSwitcher() {
       {/* SECTION HEADER */}
       <div className="text-center">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-forest/15 bg-forest-muted/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-forest">
-          <Sparkles size={13} className="text-gold-dark" /> Select Care Service
+          <Sparkles size={13} className="text-gold-dark" /> Ayurvedic Remedies & Care
         </span>
         <h2 className="mt-2.5 font-serif text-2xl sm:text-3xl md:text-4xl text-forest">
-          Holistic Ayurvedic Care
+          Holistic Ayurvedic Wellness
         </h2>
         <p className="mx-auto mt-1.5 max-w-lg text-xs sm:text-sm text-stone-600">
-          Switch seamlessly between certified Vaidya consultations and classical herbal formulations.
+          Shop classical lab-tested herbal remedies or consult our NABH-accredited Vedic Vaidyas.
         </p>
       </div>
 
-      {/* LUXURY SEGMENTED SWITCHER BAR */}
+      {/* LUXURY SEGMENTED SWITCHER BAR - Pharmacy First, Vaidya Second */}
       <div className="mx-auto mt-6 sm:mt-8 max-w-md sm:max-w-lg">
         <div className="relative flex rounded-2xl bg-white p-1.5 shadow-sm border border-stone-200">
-          {/* Doctors Option */}
-          <button
-            type="button"
-            onClick={() => setActiveTab("doctors")}
-            className={cn(
-              "relative z-10 flex flex-1 items-center justify-center gap-1.5 sm:gap-2 rounded-xl py-2.5 sm:py-3 text-xs sm:text-sm font-semibold transition-colors duration-200",
-              activeTab === "doctors" ? "text-white" : "text-stone-600 hover:text-forest"
-            )}
-          >
-            <Stethoscope size={16} className={activeTab === "doctors" ? "text-gold-light" : "text-forest"} />
-            <span>Consult Vaidya</span>
-            {activeTab === "doctors" && (
-              <motion.div
-                layoutId="switcher-pill"
-                className="absolute inset-0 z-[-1] rounded-xl bg-forest shadow-md"
-                transition={{ type: "spring", stiffness: 380, damping: 30 }}
-              />
-            )}
-          </button>
-
-          {/* Pharma Option */}
+          {/* 1st: Pharma Option */}
           <button
             type="button"
             onClick={() => setActiveTab("pharma")}
@@ -75,6 +55,26 @@ export function CareSwitcher() {
             <Sparkles size={16} className={activeTab === "pharma" ? "text-gold-light" : "text-gold-dark"} />
             <span>Ayurvedic Pharmacy</span>
             {activeTab === "pharma" && (
+              <motion.div
+                layoutId="switcher-pill"
+                className="absolute inset-0 z-[-1] rounded-xl bg-forest shadow-md"
+                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+              />
+            )}
+          </button>
+
+          {/* 2nd: Doctors Option */}
+          <button
+            type="button"
+            onClick={() => setActiveTab("doctors")}
+            className={cn(
+              "relative z-10 flex flex-1 items-center justify-center gap-1.5 sm:gap-2 rounded-xl py-2.5 sm:py-3 text-xs sm:text-sm font-semibold transition-colors duration-200",
+              activeTab === "doctors" ? "text-white" : "text-stone-600 hover:text-forest"
+            )}
+          >
+            <Stethoscope size={16} className={activeTab === "doctors" ? "text-gold-light" : "text-forest"} />
+            <span>Consult Vaidya</span>
+            {activeTab === "doctors" && (
               <motion.div
                 layoutId="switcher-pill"
                 className="absolute inset-0 z-[-1] rounded-xl bg-forest shadow-md"

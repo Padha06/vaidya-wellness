@@ -24,110 +24,112 @@ export type Product = {
 
 export const doctors: Doctor[] = [
   {
-    id: "ananya-sharma",
-    name: "Vaidya Ananya Sharma",
-    title: "BAMS, MD (Ayu)",
-    specialization: "Panchakarma & Detox",
-    experience_years: 18,
-    bio: "Former Panchakarma chief at a NABH-accredited Ayurvedic hospital. Has guided 2,000+ detox and rejuvenation programs.",
-    approach: "Gentle, root-cause detox — seasonal Panchakarma tailored to your Prakriti and Agni.",
-    credentials: "BAMS, MD (Kayachikitsa) · NABH Certified · 18 yrs",
-    image_url:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop",
-    rating: 4.9
-  },
-  {
     id: "rajesh-iyer",
     name: "Vaidya Rajesh Iyer",
-    title: "BAMS",
-    specialization: "Digestive & Liver Care",
+    title: "BAMS, Senior Vaidya",
+    specialization: "Digestive Care & Kayachikitsa",
     experience_years: 22,
-    bio: "Gut-health specialist blending classical Virechana protocols with modern dietetics. Trusted by 3,000+ patients for IBS, acidity and fatty liver.",
-    approach: "Agni-first healing — food, herbs and routine before heavy medication.",
-    credentials: "BAMS · CCAH (Nutrition) · 22 yrs",
+    bio: "Gut-health specialist blending classical Virechana protocols with personalized dietetics. Trusted by 3,000+ patients for IBS, acidity, and metabolic harmony.",
+    approach: "Agni-first healing — restoring cellular metabolism and digestive fire before prescription.",
+    credentials: "BAMS (Kerala Ayurveda Academy) · CCAH · 22 yrs",
     image_url:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=800&auto=format&fit=crop",
-    rating: 4.8
+      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop",
+    rating: 4.9
   },
   {
     id: "priya-menon",
     name: "Vaidya Priya Menon",
     title: "BAMS, MS (Ayu)",
-    specialization: "Women's Health & Fertility",
+    specialization: "Women's Health & Hormones",
     experience_years: 15,
-    bio: "Specialist in PCOS, thyroid support and pre/post-natal Ayurveda. Known for compassionate, unhurried 30-minute consultations.",
-    approach: "Cycle-aware care — aligning hormones, sleep and digestion together.",
-    credentials: "BAMS, MS (Prasuti Tantra) · 15 yrs",
+    bio: "Specialist in PCOS, thyroid balance, and pre/post-natal Ayurveda. Renowned for unhurried 30-minute consultations and compassionate care.",
+    approach: "Cycle-aware wellness — harmonizing hormonal rhythms with classical Rasayana therapies.",
+    credentials: "BAMS, MS (Prasuti Tantra) · NABH Certified · 15 yrs",
     image_url:
       "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop",
     rating: 4.9
+  },
+  {
+    id: "ananya-sharma",
+    name: "Vaidya Ananya Sharma",
+    title: "BAMS, MD (Kayachikitsa)",
+    specialization: "Panchakarma & Nadi Pariksha",
+    experience_years: 18,
+    bio: "Former Chief Vaidya at Kerala Panchakarma Institute. Expert in classical pulse diagnosis (Nadi Pariksha) and seasonal detoxification regimens.",
+    approach: "Gentle root-cause purification — tailored to your unique Prakriti constitution.",
+    credentials: "BAMS, MD (Ayu) · Gold Medalist · 18 yrs",
+    image_url:
+      "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=800&auto=format&fit=crop",
+    rating: 4.8
   }
 ];
 
 export const products: Product[] = [
   {
     id: "ashwagandha",
-    name: "Ashwagandha Capsules",
+    name: "Pure Ashwagandha Rasayana",
     category: "Immunity",
     price: 499,
-    description: "KSM-grade root extract for stress, sleep and strength.",
+    description: "KSM-66 root extract infused with organic ghee for stress relief, cortisol balance, and vital Ojas.",
     image_url:
-      "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=800&auto=format&fit=crop",
     in_stock: true,
     tag: "Bestseller"
   },
   {
     id: "triphala",
-    name: "Triphala Churna",
+    name: "Classical Triphala Churna",
     category: "Digestion",
     price: 299,
-    description: "Classic three-fruit formula for gentle daily detox.",
+    description: "Haritaki, Bibhitaki, and Amalaki milled fresh to support gentle gut cleansing and daily digestive fire.",
     image_url:
-      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=800&auto=format&fit=crop",
     in_stock: true
   },
   {
     id: "chyawanprash",
-    name: "Chyawanprash",
+    name: "Amalaki Chyawanprash",
     category: "Immunity",
     price: 649,
-    description: "Amalaki-rich rejuvenative for family immunity.",
+    description: "Slow-cooked wild amla paste infused with 48 potent Himalayan botanicals in pure forest honey.",
     image_url:
-      "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?q=80&w=800&auto=format&fit=crop",
     in_stock: true,
-    tag: "Family pack"
+    tag: "Classical"
   },
   {
     id: "brahmi-oil",
-    name: "Brahmi Head Oil",
+    name: "Brahmi & Bhringraj Tailam",
     category: "Skin",
     price: 399,
-    description: "Cooling Brahmi + coconut oil for calm and hairfall.",
+    description: "Cold-pressed sesame oil decoction with fresh Brahmi leaves for nervous calm and root nourishment.",
     image_url:
       "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
-    in_stock: true
+    in_stock: true,
+    tag: "Pure Oil"
   },
   {
     id: "dashamoola-tea",
-    name: "Dashamoola Tea",
+    name: "Dashamoola Herbal Infusion",
     category: "Digestion",
     price: 349,
-    description: "Ten-root Vata-balancing herbal infusion, caffeine-free.",
+    description: "Ten-sacred-root Ayurvedic decoction to ground elevated Vata and relieve bloating after meals.",
     image_url:
-      "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?q=80&w=800&auto=format&fit=crop",
     in_stock: true
   },
   {
     id: "neem-capsules",
-    name: "Neem Capsules",
+    name: "Neem & Tulsi Blood Purifier",
     category: "Skin",
     price: 329,
-    description: "Blood-purifying herb for clear, healthy skin.",
+    description: "Whole-leaf organic neem and holy basil extracts to balance Pitta heat and promote radiant, clear skin.",
     image_url:
-      "https://images.unsplash.com/photo-1515023115689-589c33041d3c?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?q=80&w=800&auto=format&fit=crop",
     in_stock: true
   }
 ];
+
 
 export const timeSlots = [
   "9:00 AM",

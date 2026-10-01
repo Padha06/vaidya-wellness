@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { ShieldCheck, Leaf, Award, Users, ArrowRight } from "lucide-react";
+import { ShieldCheck, Leaf, Award, Users, ArrowRight, Sparkles } from "lucide-react";
 import { ThreeHero } from "@/components/ThreeHero";
 import { FadeIn } from "@/components/FadeIn";
 import { CareSwitcher } from "@/components/CareSwitcher";
+import { DoshaInteractive } from "@/components/DoshaInteractive";
+import { HeritageTrust } from "@/components/HeritageTrust";
 import { Button } from "@/components/ui/button";
 
 const badges = [
@@ -15,34 +17,36 @@ const badges = [
 export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
-      {/* HERO - Mobile-first responsive sizing */}
-      <section className="relative flex min-h-[78dvh] sm:min-h-[85dvh] md:min-h-[90dvh] items-center justify-center">
+      {/* HERO - Mobile-first responsive sizing with Pharmacy prioritized */}
+      <section className="relative flex min-h-[76dvh] sm:min-h-[84dvh] md:min-h-[88dvh] items-center justify-center">
         <ThreeHero />
         <div className="relative z-10 mx-auto max-w-3xl px-4 py-10 sm:py-16 text-center text-white">
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] sm:text-xs font-semibold tracking-wider uppercase backdrop-blur-md border border-white/20">
             <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-            Certified Ayurvedic care · Online & In-Clinic
+            Certified Ayurvedic Pharmacy & Tele-Clinic
           </div>
           <h1 className="font-serif text-2xl leading-tight sm:text-4xl md:text-6xl drop-shadow-sm">
             Ancient Wisdom, <br className="hidden sm:inline" />
             Modern Wellness
           </h1>
           <p className="mx-auto mt-3 max-w-lg text-xs sm:text-base md:text-lg text-white/90 leading-relaxed">
-            Consult accredited Ayurvedic Vaidyas from home or order pure classical formulations tailored to your Prakriti.
+            Order authentic classical Ayurvedic remedies formulated per ancient texts, or consult accredited Vedic Vaidyas from home.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-col justify-center gap-2.5 sm:flex-row sm:gap-3.5">
-            <Link href="/book" className="w-full sm:w-auto">
-              <Button size="md" className="w-full sm:w-auto shadow-lg shadow-forest-dark/30">
-                Book Consultation
+            {/* 1st: Pharmacy */}
+            <Link href="/products" className="w-full sm:w-auto">
+              <Button size="md" className="w-full sm:w-auto shadow-lg shadow-forest-dark/30 bg-gold text-ink hover:bg-gold-light">
+                <Sparkles size={15} /> Explore Pharmacy
               </Button>
             </Link>
-            <Link href="/products" className="w-full sm:w-auto">
+            {/* 2nd: Consult Vaidya */}
+            <Link href="/book" className="w-full sm:w-auto">
               <Button
                 size="md"
                 variant="outline"
                 className="w-full sm:w-auto border-gold/80 bg-white/10 text-white hover:bg-white hover:text-forest backdrop-blur-sm"
               >
-                Explore Pharmacy
+                Consult a Vaidya
               </Button>
             </Link>
           </div>
@@ -64,11 +68,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* DUAL CARE SWITCHER: DOCTORS & PHARMA */}
+      {/* DUAL CARE SWITCHER: AYURVEDIC PHARMACY (1ST) & VAIDYA CONSULTATION (2ND) */}
       <CareSwitcher />
 
+      {/* INTERACTIVE PRAKRITI / DOSHA FINDER */}
+      <DoshaInteractive />
+
+      {/* 4 PILLARS OF AYURVEDA & VERIFIED PATIENT STORIES */}
+      <HeritageTrust />
+
       {/* LUXURY ASSESSMENT CTA BANNER */}
-      <section className="mx-auto max-w-6xl px-3 sm:px-4 py-8 sm:py-14">
+      <section className="mx-auto max-w-6xl px-3 sm:px-4 py-6 sm:py-12">
         <FadeIn>
           <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-forest px-4 py-8 sm:px-8 sm:py-12 text-center text-white shadow-xl">
             <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gold/15 blur-3xl pointer-events-none" />
@@ -77,15 +87,20 @@ export default function HomePage() {
                 First Time Visiting?
               </span>
               <h2 className="mt-1 font-serif text-xl sm:text-3xl md:text-4xl">
-                Not sure which Vaidya or remedy you need?
+                Not sure which remedy or Vaidya you need?
               </h2>
               <p className="mx-auto mt-2 max-w-md text-xs sm:text-sm text-white/80 leading-relaxed">
-                Take our complimentary 10-minute Dosha assessment. We match your symptoms with the right specialist and classical herbs.
+                Take our complimentary 10-minute Dosha assessment. We match your symptoms with the right classical herbal formulations and specialist.
               </p>
-              <div className="mt-5 sm:mt-6">
-                <Link href="/book">
-                  <Button variant="gold" size="md" className="font-semibold text-xs sm:text-sm">
-                    Start Free Assessment <ArrowRight size={14} />
+              <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Link href="/products" className="w-full sm:w-auto">
+                  <Button variant="gold" size="md" className="w-full sm:w-auto font-semibold text-xs sm:text-sm">
+                    Browse Herbal Remedies <ArrowRight size={14} />
+                  </Button>
+                </Link>
+                <Link href="/book" className="w-full sm:w-auto">
+                  <Button variant="outline" size="md" className="w-full sm:w-auto font-semibold text-xs sm:text-sm border-gold/70 text-white hover:bg-white hover:text-forest">
+                    Book Free 10-Min Consult
                   </Button>
                 </Link>
               </div>
@@ -96,4 +111,5 @@ export default function HomePage() {
     </div>
   );
 }
+
 
