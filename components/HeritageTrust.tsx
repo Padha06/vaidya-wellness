@@ -46,6 +46,13 @@ const testimonials = [
     location: "Dubai, UAE",
     consult: "Stress & Sleep Protocol",
     rating: 5
+  },
+  {
+    quote: "Vaidya Ananya's Panchakarma guidance and Neem purifier cleared my stubborn skin flare-ups after months of failed topical creams.",
+    author: "Sneha Kapadia",
+    location: "Pune",
+    consult: "Skin & Blood Purification",
+    rating: 5
   }
 ];
 
@@ -85,22 +92,28 @@ export function HeritageTrust() {
         })}
       </div>
 
-      {/* PATIENT STORIES */}
+      {/* PATIENT STORIES - HORIZONTAL CAROUSEL / ROW */}
       <div className="mt-10 sm:mt-14 rounded-3xl bg-forest-muted/50 border border-forest/15 p-4 sm:p-8">
-        <div className="text-center mb-6">
-          <span className="text-[11px] uppercase tracking-wider font-semibold text-gold-dark">
-            Patient Stories & Results
-          </span>
-          <h3 className="font-serif text-xl sm:text-2xl text-forest mt-1">
-            Healed by Ancient Wisdom
-          </h3>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-4 sm:mb-6 gap-2">
+          <div>
+            <span className="text-[11px] uppercase tracking-wider font-semibold text-gold-dark">
+              Patient Stories & Reviews
+            </span>
+            <h3 className="font-serif text-xl sm:text-2xl text-forest mt-0.5">
+              Healed by Ancient Wisdom
+            </h3>
+          </div>
+          <p className="text-[11px] text-stone-500 flex items-center gap-1 sm:hidden">
+            <span>👉 Swipe horizontally to view all stories</span>
+          </p>
         </div>
 
-        <div className="grid gap-3 sm:gap-5 md:grid-cols-3">
+        {/* HORIZONTAL SCROLL STRIP (Mobile) / HORIZONTAL 4-COL ROW (Desktop) */}
+        <div className="flex overflow-x-auto gap-3 sm:gap-4 pb-3 pt-1 snap-x snap-mandatory no-scrollbar -mx-2 px-2 sm:mx-0 sm:px-0">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="rounded-2xl bg-white p-4 sm:p-5 shadow-xs border border-stone-200/70 flex flex-col justify-between"
+              className="w-[84vw] max-w-[310px] sm:max-w-none sm:w-auto sm:flex-1 shrink-0 snap-center rounded-2xl bg-white p-4 sm:p-5 shadow-xs border border-stone-200/80 flex flex-col justify-between transition-all duration-200 hover:shadow-md"
             >
               <div>
                 <div className="flex items-center gap-0.5 text-gold mb-2">
@@ -117,7 +130,7 @@ export function HeritageTrust() {
                   <p className="font-semibold text-ink">{t.author}</p>
                   <p className="text-[10px] text-stone-400">{t.location}</p>
                 </div>
-                <span className="rounded-full bg-forest-muted px-2 py-0.5 text-[10px] font-medium text-forest">
+                <span className="rounded-full bg-forest-muted px-2 py-0.5 text-[10px] font-medium text-forest truncate max-w-[120px]">
                   {t.consult}
                 </span>
               </div>
@@ -128,3 +141,4 @@ export function HeritageTrust() {
     </section>
   );
 }
+
