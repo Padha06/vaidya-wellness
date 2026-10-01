@@ -25,16 +25,19 @@ export function ProductCard({ product }: { product: Product }) {
       className="h-full"
     >
       <Card className="group flex h-full flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-gold/50">
-        <div className="relative overflow-hidden bg-forest/5">
+        <div className="relative aspect-[4/3] sm:aspect-square w-full overflow-hidden bg-gradient-to-b from-[#fbf9f5] to-[#f2ece1] p-3 sm:p-4 flex items-center justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={product.image_url}
             alt={product.name}
-            className="h-28 sm:h-36 md:h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-102"
             loading="lazy"
+            decoding="async"
+            width={400}
+            height={400}
           />
           {product.tag ? (
-            <span className="absolute top-2 left-2 rounded-full bg-gold/95 px-2 py-0.5 text-[10px] sm:text-xs font-semibold text-ink shadow-sm backdrop-blur">
+            <span className="absolute top-2.5 left-2.5 rounded-full bg-gold/95 px-2 py-0.5 text-[10px] sm:text-xs font-semibold text-ink shadow-sm backdrop-blur">
               {product.tag}
             </span>
           ) : null}

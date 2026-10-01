@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { DoctorCard } from "@/components/DoctorCard";
+import { VirtualItem } from "@/components/VirtualItem";
 import { Button } from "@/components/ui/button";
 import { doctors } from "@/lib/mockData";
 
@@ -31,10 +32,12 @@ export default function DoctorsPage() {
       </FadeIn>
       <div className="mt-6 sm:mt-10 grid gap-4 sm:gap-6 md:grid-cols-3">
         {doctors.map((d, i) => (
-          <FadeIn key={d.id} delay={i * 0.08}>
-            <DoctorCard doctor={d} linkMode />
-            <p className="mt-2 px-1 text-[11px] sm:text-xs text-stone-500">{d.credentials}</p>
-          </FadeIn>
+          <VirtualItem key={d.id} immediate={i < 3} minHeight="420px">
+            <FadeIn delay={i * 0.08}>
+              <DoctorCard doctor={d} linkMode />
+              <p className="mt-2 px-1 text-[11px] sm:text-xs text-stone-500">{d.credentials}</p>
+            </FadeIn>
+          </VirtualItem>
         ))}
       </div>
     </div>

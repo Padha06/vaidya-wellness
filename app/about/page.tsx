@@ -34,7 +34,7 @@ export default function AboutPage() {
           {doctors.map((d) => (
             <div key={d.id} className="text-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={d.image_url} alt={d.name} className="mx-auto h-14 w-14 sm:h-20 sm:w-20 rounded-full object-cover ring-2 ring-gold" loading="lazy" />
+              <img src={d.image_url} alt={d.name} className="mx-auto h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover object-top ring-2 ring-gold/70 shadow-sm" loading="lazy" decoding="async" />
               <p className="mt-2 text-xs font-semibold sm:text-sm">{d.name.replace("Vaidya ", "")}</p>
               <p className="text-[10px] sm:text-xs text-stone-500">{d.specialization}</p>
             </div>

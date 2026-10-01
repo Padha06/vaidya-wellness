@@ -32,7 +32,7 @@ export const doctors: Doctor[] = [
     bio: "Gut-health specialist blending classical Virechana protocols with personalized dietetics. Trusted by 3,000+ patients for IBS, acidity, and metabolic harmony.",
     approach: "Agni-first healing — restoring cellular metabolism and digestive fire before prescription.",
     credentials: "BAMS (Kerala Ayurveda Academy) · CCAH · 22 yrs",
-    image_url: "/doctors/rajesh-iyer.jpg",
+    image_url: "/doctors/rajesh-iyer.webp",
     rating: 4.9
   },
   {
@@ -44,7 +44,7 @@ export const doctors: Doctor[] = [
     bio: "Specialist in PCOS, thyroid balance, and pre/post-natal Ayurveda. Renowned for unhurried 30-minute consultations and compassionate care.",
     approach: "Cycle-aware wellness — harmonizing hormonal rhythms with classical Rasayana therapies.",
     credentials: "BAMS, MS (Prasuti Tantra) · NABH Certified · 15 yrs",
-    image_url: "/doctors/priya-menon.jpg",
+    image_url: "/doctors/priya-menon.webp",
     rating: 4.9
   },
   {
@@ -56,7 +56,7 @@ export const doctors: Doctor[] = [
     bio: "Former Chief Vaidya at Kerala Panchakarma Institute. Expert in classical pulse diagnosis (Nadi Pariksha) and seasonal detoxification regimens.",
     approach: "Gentle root-cause purification — tailored to your unique Prakriti constitution.",
     credentials: "BAMS, MD (Ayu) · Gold Medalist · 18 yrs",
-    image_url: "/doctors/ananya-sharma.jpg",
+    image_url: "/doctors/ananya-sharma.webp",
     rating: 4.8
   }
 ];
@@ -69,7 +69,7 @@ export const products: Product[] = [
     category: "Immunity",
     price: 499,
     description: "KSM-66 root extract infused with organic ghee for stress relief, cortisol balance, and vital Ojas.",
-    image_url: "/products/ashwagandha.png",
+    image_url: "/products/ashwagandha.webp",
     in_stock: true,
     tag: "Bestseller"
   },
@@ -79,7 +79,7 @@ export const products: Product[] = [
     category: "Digestion",
     price: 299,
     description: "Haritaki, Bibhitaki, and Amalaki milled fresh to support gentle gut cleansing and daily digestive fire.",
-    image_url: "/products/triphala.png",
+    image_url: "/products/triphala.webp",
     in_stock: true
   },
   {
@@ -88,7 +88,7 @@ export const products: Product[] = [
     category: "Immunity",
     price: 649,
     description: "Slow-cooked wild amla paste infused with 48 potent Himalayan botanicals in pure forest honey.",
-    image_url: "/products/chyawanprash.png",
+    image_url: "/products/chyawanprash.webp",
     in_stock: true,
     tag: "Classical"
   },
@@ -98,7 +98,7 @@ export const products: Product[] = [
     category: "Skin",
     price: 399,
     description: "Cold-pressed sesame oil decoction with fresh Brahmi leaves for nervous calm and root nourishment.",
-    image_url: "/products/brahmi-oil.png",
+    image_url: "/products/brahmi-oil.webp",
     in_stock: true,
     tag: "Pure Oil"
   },
@@ -108,7 +108,7 @@ export const products: Product[] = [
     category: "Digestion",
     price: 349,
     description: "Ten-sacred-root Ayurvedic decoction to ground elevated Vata and relieve bloating after meals.",
-    image_url: "/products/dashamoola-tea.png",
+    image_url: "/products/dashamoola-tea.webp",
     in_stock: true
   },
   {
@@ -117,7 +117,7 @@ export const products: Product[] = [
     category: "Skin",
     price: 329,
     description: "Whole-leaf organic neem and holy basil extracts to balance Pitta heat and promote radiant, clear skin.",
-    image_url: "/products/neem-capsules.png",
+    image_url: "/products/neem-capsules.webp",
     in_stock: true
   }
 ];

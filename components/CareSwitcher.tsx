@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Stethoscope, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
 import { DoctorCard } from "@/components/DoctorCard";
 import { ProductCard } from "@/components/ProductCard";
+import { VirtualItem } from "@/components/VirtualItem";
 import { Button } from "@/components/ui/button";
 import { doctors, products } from "@/lib/mockData";
 import { cn } from "@/lib/utils";
@@ -124,8 +125,10 @@ export function CareSwitcher() {
 
               {/* Doctors Grid */}
               <div className="mt-4 grid gap-4 sm:gap-6 md:grid-cols-3">
-                {filteredDoctors.map((d) => (
-                  <DoctorCard key={d.id} doctor={d} linkMode />
+                {filteredDoctors.map((d, idx) => (
+                  <VirtualItem key={d.id} immediate={idx < 3} minHeight="420px">
+                    <DoctorCard doctor={d} linkMode />
+                  </VirtualItem>
                 ))}
               </div>
 
@@ -183,8 +186,10 @@ export function CareSwitcher() {
 
               {/* Products 2-col on mobile, 3-col on desktop */}
               <div className="mt-4 grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3">
-                {filteredProducts.map((p) => (
-                  <ProductCard key={p.id} product={p} />
+                {filteredProducts.map((p, idx) => (
+                  <VirtualItem key={p.id} immediate={idx < 4} minHeight="360px">
+                    <ProductCard product={p} />
+                  </VirtualItem>
                 ))}
               </div>
 

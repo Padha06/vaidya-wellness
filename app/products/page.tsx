@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Stethoscope, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { ProductCard } from "@/components/ProductCard";
+import { VirtualItem } from "@/components/VirtualItem";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/mockData";
 import { cn } from "@/lib/utils";
@@ -62,9 +63,11 @@ export default function ProductsPage() {
       ) : (
         <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-6">
           {list.map((p, i) => (
-            <FadeIn key={p.id} delay={i * 0.05}>
-              <ProductCard product={p} />
-            </FadeIn>
+            <VirtualItem key={p.id} immediate={i < 4} minHeight="360px">
+              <FadeIn delay={i * 0.05}>
+                <ProductCard product={p} />
+              </FadeIn>
+            </VirtualItem>
           ))}
         </div>
       )}

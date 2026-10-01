@@ -46,3 +46,14 @@ h6,
 p {
   overflow-wrap: break-word;
 }
+
+/* Browser-level Virtualization & Content Visibility */
+.virtualized-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 340px;
+}
+
+.virtualized-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}

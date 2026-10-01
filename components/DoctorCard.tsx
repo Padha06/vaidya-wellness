@@ -32,13 +32,16 @@ export function DoctorCard({
           selected ? "ring-2 ring-forest shadow-md" : "hover:border-stone-300"
         )}
       >
-        <div className="relative overflow-hidden bg-forest/5">
+        <div className="relative aspect-[4/5] w-full overflow-hidden bg-forest/5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={doctor.image_url}
             alt={doctor.name}
-            className="h-36 sm:h-44 md:h-50 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
             loading="lazy"
+            decoding="async"
+            width={400}
+            height={500}
           />
           <div className="absolute top-2.5 right-2.5 rounded-full bg-white/95 px-2 py-0.5 text-xs font-semibold text-ink shadow-sm backdrop-blur">
             <span className="flex items-center gap-1">
