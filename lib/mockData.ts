@@ -71,8 +71,7 @@ export const products: Product[] = [
     category: "Immunity",
     price: 499,
     description: "KSM-66 root extract infused with organic ghee for stress relief, cortisol balance, and vital Ojas.",
-    image_url:
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=800&auto=format&fit=crop",
+    image_url: "/products/ashwagandha.png",
     in_stock: true,
     tag: "Bestseller"
   },
@@ -82,8 +81,7 @@ export const products: Product[] = [
     category: "Digestion",
     price: 299,
     description: "Haritaki, Bibhitaki, and Amalaki milled fresh to support gentle gut cleansing and daily digestive fire.",
-    image_url:
-      "https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=800&auto=format&fit=crop",
+    image_url: "/products/triphala.png",
     in_stock: true
   },
   {
@@ -92,8 +90,7 @@ export const products: Product[] = [
     category: "Immunity",
     price: 649,
     description: "Slow-cooked wild amla paste infused with 48 potent Himalayan botanicals in pure forest honey.",
-    image_url:
-      "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?q=80&w=800&auto=format&fit=crop",
+    image_url: "/products/chyawanprash.png",
     in_stock: true,
     tag: "Classical"
   },
@@ -103,8 +100,7 @@ export const products: Product[] = [
     category: "Skin",
     price: 399,
     description: "Cold-pressed sesame oil decoction with fresh Brahmi leaves for nervous calm and root nourishment.",
-    image_url:
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
+    image_url: "/products/brahmi-oil.png",
     in_stock: true,
     tag: "Pure Oil"
   },
@@ -114,8 +110,7 @@ export const products: Product[] = [
     category: "Digestion",
     price: 349,
     description: "Ten-sacred-root Ayurvedic decoction to ground elevated Vata and relieve bloating after meals.",
-    image_url:
-      "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?q=80&w=800&auto=format&fit=crop",
+    image_url: "/products/dashamoola-tea.png",
     in_stock: true
   },
   {
@@ -124,11 +119,11 @@ export const products: Product[] = [
     category: "Skin",
     price: 329,
     description: "Whole-leaf organic neem and holy basil extracts to balance Pitta heat and promote radiant, clear skin.",
-    image_url:
-      "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?q=80&w=800&auto=format&fit=crop",
+    image_url: "/products/neem-capsules.png",
     in_stock: true
   }
 ];
+
 
 
 export const timeSlots = [
