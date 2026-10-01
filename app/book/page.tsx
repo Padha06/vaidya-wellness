@@ -95,8 +95,27 @@ function BookWizard() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12">
-      <h1 className="text-center font-serif text-4xl text-forest">Book your consultation</h1>
+    <div className="mx-auto max-w-4xl px-3 sm:px-4 py-8 sm:py-12">
+      {/* SWITCH BANNER TO PHARMACY */}
+      <div className="mb-6 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl bg-gold-muted/70 p-3 sm:p-4 border border-gold/40 text-xs sm:text-sm">
+        <div className="flex items-center gap-2 text-forest font-medium text-center sm:text-left">
+          <span className="font-semibold text-gold-dark">🌿 Looking for pharmacy products instead?</span>
+          <span className="hidden sm:inline text-stone-600">— Classical herbal oils & supplements</span>
+        </div>
+        <a href="/products" className="w-full sm:w-auto">
+          <Button variant="outline" size="sm" className="w-full sm:w-auto text-xs py-1.5 px-3 border-gold text-forest">
+            Explore Pharmacy Products <ArrowRight size={13} />
+          </Button>
+        </a>
+      </div>
+
+      <h1 className="text-center font-serif text-2xl sm:text-3xl md:text-4xl text-forest">
+        Book your consultation
+      </h1>
+      <p className="mt-1 text-center text-xs sm:text-sm text-stone-500">
+        Choose your Vaidya specialist, pick a preferred slot, and start your healing journey.
+      </p>
+
       {/* Stepper */}
       <div className="mx-auto mt-6 flex max-w-lg items-start text-xs font-medium">
         {["Doctor", "Date & Time", "Details", "Confirm"].map((label, i) => (
@@ -104,20 +123,20 @@ function BookWizard() {
             <div className="flex flex-col items-center gap-1">
               <span
                 className={cn(
-                  "flex h-9 w-9 items-center justify-center rounded-full text-sm",
-                  step > i + 1 ? "bg-forest text-white" : step === i + 1 ? "bg-gold text-ink" : "bg-stone-200 text-stone-500"
+                  "flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full text-xs font-semibold transition-all",
+                  step > i + 1 ? "bg-forest text-white" : step === i + 1 ? "bg-gold text-ink ring-2 ring-gold/40" : "bg-stone-200 text-stone-500"
                 )}
               >
                 {step > i + 1 ? "✓" : i + 1}
               </span>
-              <span className={cn("hidden sm:block", step === i + 1 ? "text-forest" : "text-stone-400")}>{label}</span>
+              <span className={cn("text-[10px] sm:text-xs", step === i + 1 ? "text-forest font-semibold" : "text-stone-400")}>{label}</span>
             </div>
-            {i < 3 && <div className={cn("mx-2 mt-[15px] h-0.5 flex-1", step > i + 1 ? "bg-forest" : "bg-stone-200")} />}
+            {i < 3 && <div className={cn("mx-1.5 sm:mx-2 mt-[13px] sm:mt-[15px] h-0.5 flex-1 transition-colors", step > i + 1 ? "bg-forest" : "bg-stone-200")} />}
           </Fragment>
         ))}
       </div>
 
-      <div className="mt-8">
+      <div className="mt-6 sm:mt-8">
         {step === 1 && (
           <div>
             <div className="grid gap-5 md:grid-cols-3">
